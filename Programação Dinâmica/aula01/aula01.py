@@ -6,44 +6,61 @@ tempo_inicial = time.time()
     pass
 print('Tempo decorrido: ', time.time() - tempo_inicial)'''
 
-tempo_inicial = time.time()
-lista1 = [i for i in range(10000)]
+count = 0
 
 # 1
 def getlast(n):
+    global count
+    count += 1
     return n[len(n) - 1]
+    
+lista1 = [i for i in range(10000)]
+
 tempo_inicial = time.time()
 print(getlast(lista1))
+
+print('Função executada: ', count, ' vez(es)')
 print('Tempo decorrido: ', time.time() - tempo_inicial)
 # R: O(1)
 
 # 2
-lista2 = [random.randint(0, 100) for _ in range(100)]
 def count_pairs_equal(a):
+    global count
     c = 0
-    count = 0
     for i in range(len(a)):
         for j in range(i + 1, len(a)):
             count += 1
             if a[i] == a[j]:
                 c += 1
-    print(count)
     return c
+lista2 = [random.randint(0, 100) for _ in range(100)]
+
 tempo_inicial = time.time()
 print(count_pairs_equal(lista2))
+
+print('Função executada: ', count, ' vez(es)')
 print('Tempo decorrido: ', time.time() - tempo_inicial)
 # R: O(n^2)
 
 # 3
-lista3 = [random.randint(-100, 100) for _ in range(100)]
 def has_zero_sum_triple(a):
+    global count
     n = len(a)
     for i in range(n):
         for j in range(i + 1, n):
             for k in range(j + 1, n):
+                count += 1
                 if a[i] + a[j] + a[k] == 0:
                     return True
     return False
+
+lista3 = [random.randint(-100, 100) for _ in range(100)]
+
+tempo_inicial = time.time()
+print(has_zero_sum_triple(lista3))
+
+print('Função executada: ', count, ' vez(es)')
+print('Tempo decorrido: ', time.time() - tempo_inicial)
 # R: O(n^3)
 
 # 4
@@ -78,7 +95,7 @@ def common_prefix(words):
             if p == "":
                 return ""
     return p
-# R: O(n log(n))
+# R: O(n * m)
 
 # 7
 def count_hits(sorted_a, queries):
@@ -87,7 +104,7 @@ def count_hits(sorted_a, queries):
         if binary_search(sorted_a, q) != -1:
             hits += 1
     return hits
-# R:
+# R: O(q log(n))
 
 # 8
 def factorial(n):
@@ -115,4 +132,4 @@ def perm(n):
     for i in range(n):
         total += perm(n - 1)
     return total
-# R:
+# R: O(n!)
