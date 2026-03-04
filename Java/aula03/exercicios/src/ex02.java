@@ -13,7 +13,7 @@ public class ex02 {
         valor2 = ler.nextInt();
 
         while(valor1 > valor2){
-            System.out.printf("O 2º valor (%.d) tem que ser maior que o 1º (%.d)", valor2, valor1);
+            System.out.printf("O 2º valor (%d) tem que ser maior que o 1º (%d)", valor2, valor1);
             valor2 = ler.nextInt();
 
             if(valor2 > valor1)
