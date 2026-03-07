@@ -9,8 +9,9 @@ public class ex03 {
         System.out.println("Digite um valor positivo: ");
         num = ler.nextInt();
 
-        while(num < 0){
-            System.out.println("Não aceita nº negativo! Digite um positivo");
+        while(num <= 0){
+            System.out.println("Não aceita nº negativo ou o zero!");
+            System.out.println("Digite um valor positivo: ");
             num = ler.nextInt();
         }
 
