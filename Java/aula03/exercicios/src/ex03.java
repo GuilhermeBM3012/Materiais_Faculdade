@@ -18,13 +18,13 @@ public class ex03 {
         multipliador = 1;
         while(multipliador <= 10){
             resultado = num * multipliador;
-            System.out.printf("%.d X %.d = %.d", num, multipliador, resultado);
+            System.out.printf("%d X %d = %d", num, multipliador, resultado);
 
             multipliador ++;
         }
         /*for(multipliador = 1; multipliador <= 10; multipliador ++){
             resultado = num * multipliador;
-            System.out.printf("%.d X %.d = %.d", num, multipliador, resultado);
+            System.out.printf("%d X %d = %d", num, multipliador, resultado);
         }*/
 
         ler.close();
