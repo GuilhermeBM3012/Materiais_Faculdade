@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Programa {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
-        Cliente[] cliente = new Cliente[5];
+        Cliente[] lista_cliente = new Cliente[5];
         
         for (int i = 0; i < 5; i++){
             Cliente c = new Cliente();
@@ -21,12 +21,12 @@ public class Programa {
             System.out.printf("Diga o email do %d cliente : ", i);
             c.email = ler.next();
 
-            cliente[i] = c;
+            lista_cliente[i] = c;
         }
 
         System.out.println("\n--- LISTA DE CLIENTES ---");
         for (int i = 0; i < 5; i++){
-            Cliente c = cliente[i];
+            Cliente c = lista_cliente[i];
             
             System.out.printf("ID: %d\nNome:%s\nIdade: %d\n" +
                         "Email:%s\n", c.id, c.nome, c.idade, c.email);
