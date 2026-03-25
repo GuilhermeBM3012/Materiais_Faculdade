@@ -7,8 +7,8 @@ public class Programa {
         Scanner ler = new Scanner(System.in);
         Cliente[] cliente = new Cliente[5];
         
-        for (int i = 0; i <= 5; i++){
-            Cliente c = new Clientes();
+        for (int i = 0; i < 5; i++){
+            Cliente c = new Cliente();
 
             c.id = i + 1;
             
@@ -20,12 +20,14 @@ public class Programa {
 
             System.out.printf("Diga o email do %d cliente : ", i);
             c.email = ler.next();
-        }
 
+            cliente[i] = c;
+        }
 
         System.out.println("\n--- LISTA DE CLIENTES ---");
         for (int i = 0; i < 5; i++){
-            Clientes c = clientes[i];
+            Cliente c = cliente[i];
+            
             System.out.printf("ID: %d\nNome:%s\nIdade: %d\n" +
                         "Email:%s\n", c.id, c.nome, c.idade, c.email);
         }
