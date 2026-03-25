@@ -1,6 +1,6 @@
 package exercicios;
 
-public class Clientes {
+public class Cliente {
     public int id;
     public String nome;
     public int idade;
