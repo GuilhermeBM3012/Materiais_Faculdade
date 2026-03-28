@@ -25,9 +25,10 @@ public class Programa {
         System.out.println("\n--- LISTA DE CLIENTES ---");
         for (int i = 0; i < 5; i++){
             Cliente c = lista_cliente[i];
-            
-            System.out.printf("ID: %d\nNome:%s\nIdade: %d\n" +
-                        "Email:%s\n", c.id, c.nome, c.idade, c.email);
+
+            if (c.idade > 18)
+                System.out.printf("ID: %d\nNome: %s\nIdade: %d\n" +
+                            "Email: %s\n", c.id, c.nome, c.idade, c.email);
         }
         ler.close()
     }
