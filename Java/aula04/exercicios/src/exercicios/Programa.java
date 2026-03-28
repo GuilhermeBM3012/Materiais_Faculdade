@@ -29,5 +29,6 @@ public class Programa {
             System.out.printf("ID: %d\nNome:%s\nIdade: %d\n" +
                         "Email:%s\n", c.id, c.nome, c.idade, c.email);
         }
+        ler.close()
     }
 }
