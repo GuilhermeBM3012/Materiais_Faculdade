@@ -9,8 +9,6 @@ public class Programa {
         
         for (int i = 0; i < 5; i++){
             Cliente c = new Cliente();
-
-            c.id = i + 1;
             
             System.out.printf("Diga o nome do %dº cliente: ", i);
             c.nome = ler.next();
